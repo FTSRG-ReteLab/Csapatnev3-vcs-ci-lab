@@ -57,7 +57,7 @@ public class TrainSystemTest {
 	public void UserGetAlarmFlag(){
 
 
-		Assert.asserFalse(user.getAlarmFlag());
+		Assert.assertFalse(user.getAlarmFlag());
 	}
 
 	
