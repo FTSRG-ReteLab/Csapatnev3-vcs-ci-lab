@@ -15,6 +15,7 @@ public class TrainControllerImpl implements TrainController {
 		} else {
 		    if(referenceSpeed+step > 0) {
                 referenceSpeed += step;
+                System.out.println("Thre reference speed changed: " + referenceSpeed);
             } else {
 		        referenceSpeed = 0;
             }
