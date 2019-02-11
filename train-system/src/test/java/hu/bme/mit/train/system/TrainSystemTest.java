@@ -54,10 +54,10 @@ public class TrainSystemTest {
 	}
 
 	@Test
-	public void MathSkills(){
-		int sum=9;
+	public void UserGetAlarmFlag(){
 
-		Assert.asserEquals(sum, 5+4);
+
+		Assert.asserFalse(user.getAlarmFlag());
 	}
 
 	
