@@ -7,6 +7,8 @@ public class TrainControllerImpl implements TrainController {
 	private int step = 0;
 	private int referenceSpeed = 0;
 	private int speedLimit = 0;
+	Table<Long, Integer, Integer> speedLog
+			= HashBasedTable.create();
 
 	@Override
 	public void followSpeed() {
@@ -22,6 +24,8 @@ public class TrainControllerImpl implements TrainController {
 		}
 
 		enforceSpeedLimit();
+
+		speedLog.put(System.currentTimeMillis(), step, referenceSpeed );
 	}
 
 	@Override
