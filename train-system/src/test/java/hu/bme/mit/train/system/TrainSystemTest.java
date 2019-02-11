@@ -60,5 +60,8 @@ public class TrainSystemTest {
 		Assert.assertFalse(user.getAlarmFlag());
 	}
 
+	@Test
+	public void SpeedLogTest
+
 	
 }
