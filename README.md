@@ -22,7 +22,10 @@ To compile and run tests also execute:
 ## Edit Readme
 
 * Edit the Readme
-** Using markdown
+* Using markdown
+``` java
+System.out.println("This is a java code");
+```
 
 
 ## Overview
