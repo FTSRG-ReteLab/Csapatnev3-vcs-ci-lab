@@ -8,6 +8,7 @@ import hu.bme.mit.train.interfaces.TrainController;
 import hu.bme.mit.train.interfaces.TrainSensor;
 import hu.bme.mit.train.interfaces.TrainUser;
 import hu.bme.mit.train.system.TrainSystem;
+import hu.bme.mit.train.controller;
 
 public class TrainSystemTest {
 
@@ -61,7 +62,14 @@ public class TrainSystemTest {
 	}
 
 	@Test
-	public void SpeedLogTest
+	public void SpeedLogTest()
+	{
+		user.overrideJoystickPosition(4);
+		controller.followSpeed();
+		user.overrideJoystickPosition(-5);
+		controller.followSpeed();
+		Assert.assertFalse(controller.getTachograph().isEmpty());
+	}
 
 	
 }

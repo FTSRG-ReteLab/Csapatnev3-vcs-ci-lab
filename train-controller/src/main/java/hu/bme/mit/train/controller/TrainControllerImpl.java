@@ -10,7 +10,7 @@ public class TrainControllerImpl implements TrainController {
 	private int step = 0;
 	private int referenceSpeed = 0;
 	private int speedLimit = 0;
-	Table<Long, Integer, Integer> speedLog
+	public Table<Long, Integer, Integer> speedLog
 			= HashBasedTable.create();
 
 	@Override
@@ -52,6 +52,11 @@ public class TrainControllerImpl implements TrainController {
 	@Override
 	public void setJoystickPosition(int joystickPosition) {
 		this.step = joystickPosition;		
+	}
+
+	@Override
+	public Table<Long, Integer, Integer> getTachograph(){
+		return speedLog;
 	}
 
 }
