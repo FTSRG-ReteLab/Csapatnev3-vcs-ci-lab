@@ -40,7 +40,7 @@ public class TrainSystemTest {
 		controller.followSpeed();
 		Assert.assertEquals(10, controller.getReferenceSpeed());
 
-		fail("Fail test to cause build error");
+//		fail("Fail test to cause build error");
 
 	}
 
@@ -51,6 +51,13 @@ public class TrainSystemTest {
 		user.overrideJoystickPosition(-5);
 		controller.followSpeed();
 		Assert.assertEquals(0, controller.getReferenceSpeed());
+	}
+
+	@Test
+	public void MathSkills(){
+		int sum=9;
+
+		Assert.asserEquals(sum, 5+4);
 	}
 
 	
